@@ -1,0 +1,6 @@
+
+growlnotify wrapper for vim script
+
+
+
+
