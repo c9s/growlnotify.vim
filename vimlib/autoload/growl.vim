@@ -5,10 +5,10 @@
 " License: MIT
 
 " default growl option 
-fun! growl#opt()
+fun! growl#default_opt()
   let growl_opt = {}
   let growl_opt.name = 'vim'
-  let growl_opt.appIcon = expand('~/.vim/icon/vim-icon.png')
+  let growl_opt.image = expand('~/.vim/icon/vim-icon.png')
   return growl_opt
 endf
 
