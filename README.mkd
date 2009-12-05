@@ -8,3 +8,8 @@ Command
 
     :GrowlNotifyMsg "Hello World"
 
+    :GrowlNotifyEmergence
+    :GrowlNotifyHigh        
+    :GrowlNotifyNormal      
+    :GrowlNotifyLow         
+

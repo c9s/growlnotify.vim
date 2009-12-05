@@ -11,8 +11,3 @@ fun! growl#default_opt()
   let growl_opt.image = expand('~/.vim/icon/vim-icon.png')
   return growl_opt
 endf
-
-
-
-
-
