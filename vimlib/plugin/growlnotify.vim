@@ -1,5 +1,4 @@
 
-
 fun! s:check_bin()
   let pathstr = expand('$PATH')
   let path = split(pathstr,":")
@@ -11,7 +10,6 @@ fun! s:check_bin()
   endfor
   return 0
 endf
-
 
 fun! s:opt_growl_param(opt)
   let param = []
@@ -49,7 +47,20 @@ fun! g:growl_notify_msg(msg)
   cal s:growl_notify(opt)
 endf
 
+fun! g:growl_notify_priority_msg(msg,priority)
+  let opt = growl#default_opt()
+  let opt.message = a:msg
+  let opt.priority = a:priority
+  cal s:growl_notify(opt)
+endf
+
 " helper command
-com! -nargs=1 GrowlNotifyMsg  :cal g:growl_notify_msg( <f-args> )
+com! -nargs=1 GrowlNotifyMsg            :cal g:growl_notify_msg( <f-args> )
+
+com! -nargs=1 GrowlNotifyEmergence      :cal g:growl_notify_priority_msg( <f-args> , 2 )
+com! -nargs=1 GrowlNotifyHigh           :cal g:growl_notify_priority_msg( <f-args> , 1 )
+com! -nargs=1 GrowlNotifyNormal         :cal g:growl_notify_priority_msg( <f-args> , 0 )
+com! -nargs=1 GrowlNotifyLow            :cal g:growl_notify_priority_msg( <f-args> , -1 )
+
 
 " :GrowlNotifyMsg "Hello World"
