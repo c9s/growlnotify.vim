@@ -8,7 +8,7 @@
 fun! growl#opt()
   let growl_opt = {}
   let growl_opt.name = 'vim'
-  let growl_opt.appIcon = expand('~/.vim/icon/vim-editor_logo.png')
+  let growl_opt.appIcon = expand('~/.vim/icon/vim-icon.png')
   return growl_opt
 endf
 
