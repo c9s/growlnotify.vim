@@ -1,7 +1,7 @@
 
 " Plugin:  growl-notify.vim
 "          growlnotify script wrapper for vim.
-" Version: 0.1
+" Version: 0.11
 " License: MIT
 
 " default growl option 
