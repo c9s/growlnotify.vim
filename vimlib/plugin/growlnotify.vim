@@ -8,7 +8,7 @@ fun! s:growl_notify_msg(msg)
 endf
 com! -nargs=1 GrowlNotifyMsg  :cal s:growl_notify_msg( <f-args> )
 
-:GrowlNotifyMsg "Hello World"
+" :GrowlNotifyMsg "Hello World"
 
 " helper command
 " com! GrowlNotify
